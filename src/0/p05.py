@@ -2,12 +2,14 @@
 # この関数を用い，”I am an NLPer”という文から単語bi-gram，文字bi-gramを得よ．
 
 def word_n_gram(text, num=2):
-  words = text.split(" ")
-  return list(map(lambda i: words[i:i+num], range(len(words))))
+    words = text.split(" ")
+    return list(map(lambda i: words[i:i+num], range(len(words))))
+
 
 def char_n_gram(text, num=2):
-  words = text.replace(" ", "")
-  return list(map(lambda i: words[i:i+num], range(len(words))))
+    words = text.replace(" ", "")
+    return list(map(lambda i: words[i:i+num], range(len(words))))
+
 
 text1 = "I am an NLPer"
 

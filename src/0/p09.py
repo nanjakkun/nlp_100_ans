@@ -6,16 +6,18 @@
 
 import random
 
-def typoglycemia(text) -> str:
-  def shuffle(word) -> str:
-    if (len(word) <= 4):
-      return word
-    else:
-      substr = word[1:-1:]
-      return word[0] + "".join(random.sample(substr, len(substr))) + word[-1]
 
-  words = text.split(" ")
-  return " ".join(map(shuffle, words))
+def typoglycemia(text) -> str:
+    def shuffle(word) -> str:
+        if (len(word) <= 4):
+            return word
+        else:
+            substr = word[1:-1:]
+            return word[0] + "".join(random.sample(substr, len(substr))) + word[-1]
+
+    words = text.split(" ")
+    return " ".join(map(shuffle, words))
+
 
 text1 = "I couldn’t believe that I could actually understand what I was reading : the phenomenal power of the human mind ."
 print(typoglycemia(text1))

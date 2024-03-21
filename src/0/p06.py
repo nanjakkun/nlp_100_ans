@@ -4,8 +4,9 @@
 
 # 前回の問題で使ったのと同じ関数
 def char_n_gram(text, num=2):
-  words = text.replace(" ", "")
-  return list(map(lambda i: words[i:i+num], range(len(words))))
+    words = text.replace(" ", "")
+    return list(map(lambda i: words[i:i+num], range(len(words))))
+
 
 text1 = "paraparaparadise"
 text2 = "paragraph"
@@ -18,7 +19,7 @@ print("intersect: ", X & Y)
 print("diff: ", X - Y)
 
 if "se" in X:
-  print("X contains se")
+    print("X contains se")
 
 if "se" in Y:
-  print("Y contains se")
+    print("Y contains se")
