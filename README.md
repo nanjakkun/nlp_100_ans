@@ -8,11 +8,11 @@ https://nlp100.github.io/ja/
 
 使用した言語はPython 3.10
 
-venvを使って行った。
+venvを使用している。
 venvの起動とライブラリのインストールは以下のように行う。
 
 ```
 $ source .venv/bin/activate
-(.venv) nlp_100_ans$ pip freeze > requirements.txt
+(.venv) nlp_100_ans$ pip install -r requirements.txt
 (.venv) nlp_100_ans$ python -m unidic download
 ```
