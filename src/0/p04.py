@@ -7,12 +7,14 @@ import re
 
 str1 = "Hi He Lied Because Boron Could Not Oxidize Fluorine. New Nations Might Also Sign Peace Security Clause. Arthur King Can."
 
+
 def to_elemnt_symbol(itr) -> str:
-  idx = itr[0]
-  if (idx in [1, 5, 6, 7, 8, 9, 15, 16, 19]):
-    return itr[1][0], idx
-  else:
-    return itr[1][0:2], idx
+    idx = itr[0]
+    if (idx in [1, 5, 6, 7, 8, 9, 15, 16, 19]):
+        return itr[1][0], idx
+    else:
+        return itr[1][0:2], idx
+
 
 itr1 = filter(lambda x: len(x) > 0, re.split(r'[\s,\.]+', str1))
 itr2 = map(to_elemnt_symbol, enumerate(itr1, 1))
