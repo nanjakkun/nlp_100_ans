@@ -15,6 +15,8 @@ with open(os.path.dirname(__file__) + "/neko.txt.mecab", mode="r") as f:
         list1 = line.split("\t")
 
         if len(list1) < 2:
+            sentenses.append(morphemes)
+            morphemes = []
             continue
 
         surface = list1[0]
@@ -30,10 +32,6 @@ with open(os.path.dirname(__file__) + "/neko.txt.mecab", mode="r") as f:
         dict["pos1"] = list2[1]
 
         morphemes.append(dict)
-
-        if surface == "。":
-            sentenses.append(morphemes)
-            morphemes = []
 
 with open(os.path.dirname(__file__) + "/30answer.txt", "w") as f:
     json.dump(sentenses, f)
