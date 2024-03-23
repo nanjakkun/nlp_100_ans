@@ -21,17 +21,14 @@ def get_base(x):
 
 
 words = filter(None, map(get_base, flatten(sentenses)))
-
 c = collections.Counter(words)
+most_commons = c.most_common()[:10]
 
-word_list = []
-height_list = []
-for i in range(10):
-    word_list.append(c.most_common()[:10][i][0])
-    height_list.append(c.most_common()[:10][i][1])
+common_words = list(map(lambda x: x[0], most_commons))
+nums = list(map(lambda x: x[1], most_commons))
 
 # ローカルにファイルで書き出す
 # jupiternotebookだとinlineのほうが良いかも
 matplotlib.use('Agg')
-plt.bar(x=word_list, height=height_list)
+plt.bar(x=common_words, height=nums)
 plt.savefig(os.path.dirname(__file__) + "/36.png")
