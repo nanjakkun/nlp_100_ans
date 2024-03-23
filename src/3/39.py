@@ -1,6 +1,4 @@
-# 単語の出現頻度のヒストグラムを描け．
-# ただし，横軸は出現頻度を表し，1から単語の出現頻度の最大値までの線形目盛とする．
-# 縦軸はx軸で示される出現頻度となった単語の異なり数（種類数）である．
+# 単語の出現頻度順位を横軸，その出現頻度を縦軸として，両対数グラフをプロットせよ．
 
 import os
 import json
@@ -24,7 +22,10 @@ def get_base(x):
 
 words = filter(None, map(get_base, flatten(sentenses)))
 c = collections.Counter(words)
+sorted_words = sorted((c.values()), reverse=True)
 
 matplotlib.use('Agg')
-plt.hist(c.values(), 50, range=(1, 50))
-plt.savefig(os.path.dirname(__file__) + "/38.png")
+plt.xscale('log')
+plt.yscale('log')
+plt.plot(sorted_words)
+plt.savefig(os.path.dirname(__file__) + "/39.png")
