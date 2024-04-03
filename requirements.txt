@@ -19,4 +19,4 @@ six==1.16.0
 tqdm==4.66.2
 unidic==1.1.0
 urllib3==2.2.1
-wasabi==0.10.1
+wasabi==1.1.2
