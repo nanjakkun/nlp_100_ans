@@ -18,5 +18,5 @@ requests==2.32.3
 six==1.16.0
 tqdm==4.67.1
 unidic==1.1.0
-urllib3==2.2.3
+urllib3==2.3.0
 wasabi==1.1.3
