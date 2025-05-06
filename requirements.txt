@@ -9,7 +9,7 @@ kiwisolver==1.4.8
 matplotlib==3.10.1
 mecab-python3==1.0.10
 numpy==2.2.4
-packaging==24.2
+packaging==25.0
 pillow==11.2.1
 plac==1.4.5
 pyparsing==3.2.3
